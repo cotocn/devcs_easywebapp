@@ -28,6 +28,12 @@
 		</dependency>
 
 	</dependencies>
+	<pluginRepositories>
+		<pluginRepository >
+		      <id>jporacleco95940-maven</id>
+              <url>https://developer.us2.oraclecloud.com/profile/developer67605-jporacleco95940/s/developer67605-jporacleco95940_mytest/maven/</url>
+		</pluginRepository>
+	</pluginRepositories>
 	<build>
 		<finalName>easywebapp</finalName>
 	    <plugins>
