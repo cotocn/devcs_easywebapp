@@ -73,7 +73,7 @@
 	            <configuration>
 	              <!--The admin URL where the app is deployed. 
 					Here use the plugin's default value t3://localhost:7001-->
-				<adminurl>t3://127.0.0.1:9001</adminurl>
+				<adminurl>t3://localhost:9001</adminurl>
 	              <user>weblogic</user>
 	              <password>welcome1</password>
 	              <!--The location of the file or directory to be deployed-->
