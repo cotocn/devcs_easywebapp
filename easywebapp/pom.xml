@@ -28,14 +28,12 @@
 		</dependency>
 
 	</dependencies>
-	
 	<pluginRepositories>
 		<pluginRepository>
 			<id>jporacleco95940-maven</id>
 			<url>https://developer.us2.oraclecloud.com/profile/developer67605-jporacleco95940/s/developer67605-jporacleco95940_mytest/maven/</url>
 		</pluginRepository>
 	</pluginRepositories>
-
 	<build>
 		<finalName>easywebapp</finalName>
 		<plugins>
@@ -55,7 +53,7 @@
 							<goal>deploy</goal>
 						</goals>
 						<configuration>
-							<adminurl>t3://localhost:9001</adminurl>
+							<adminurl>http://localhost:9001</adminurl>
 							<user>weblogic</user>
 							<password>welcome1</password>
 							<source>${project.build.directory}/${project.build.finalName}.${project.packaging}</source>
