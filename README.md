@@ -1,7 +1,1 @@
-<<<<<<< HEAD
-# jdt2015_easywebapp
-=======
-easywebapp.git
-
-sekiya's code
->>>>>>> refs/remotes/DevCS/master
+A sample web project used for Oracle Developer Cloud Service.
