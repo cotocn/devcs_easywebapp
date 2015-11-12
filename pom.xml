@@ -42,7 +42,7 @@
 				<artifactId>maven-surefire-plugin</artifactId>
 				<configuration>
 					<excludes>
-						<exclude>**/integrationtest/*Test.java</exclude>
+						<exclude>**/integrationtest/**/*.java</exclude>
 					</excludes>
 				</configuration>
 				<executions>
@@ -58,7 +58,7 @@
 								<exclude>none</exclude>
 							</excludes>
 							<includes>
-								<include>**/integrationtest/*Test.java</include>
+								<include>**/integrationtest/**/*.java</include>
 							</includes>
 						</configuration>
 					</execution>
