@@ -1,4 +1,4 @@
-package test.easywebapp;
+package integrationtest.easywebapp;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.fail;
@@ -20,6 +20,7 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 public class EasywebappTest {
 	private WebDriver driver;
 	private String baseUrl;
+	private String contextroot;
 	private boolean acceptNextAlert = true;
 	private StringBuffer verificationErrors = new StringBuffer();
 
@@ -37,9 +38,14 @@ public class EasywebappTest {
 		}
 
 		baseUrl = System.getProperty("baseurl");
+		contextroot = System.getProperty("contextroot");
 		if (baseUrl == null) {
 			throw new Exception(
 					"You need to set the property 'baseurl'. Example : https://xxxxxx/'");
+		}
+		if (contextroot == null) {
+			throw new Exception(
+					"You need to set the property 'contextroot'. Example : easywebapp'");
 		}
 		if (!baseUrl.endsWith("/")) {
 			baseUrl = baseUrl + "/";
@@ -48,15 +54,27 @@ public class EasywebappTest {
 	}
 
 	@Test
-	public void testEasywebapp() throws Exception {
-		driver.get(baseUrl + "easywebapp-featureA/top.jsp");
+	public void testFeatureC() throws Exception {
+		driver.get(baseUrl + contextroot + "/top.jsp");
 		try {
-			assertEquals("featureA", driver.findElement(By.xpath("//h2[2]"))
+			assertEquals("featureC", driver.findElement(By.xpath("//h2[2]"))
 					.getText());
 		} catch (Error e) {
 			verificationErrors.append(e.toString());
 		}
 	}
+	
+	@Test
+	public void testHelloWorld() throws Exception {
+		driver.get(baseUrl + contextroot + "/top.jsp");
+		try {
+			assertEquals("Hello World!", driver.findElement(By.xpath("//h2[1]"))
+					.getText());
+		} catch (Error e) {
+			verificationErrors.append(e.toString());
+		}
+	}
+
 
 	@After
 	public void tearDown() throws Exception {
