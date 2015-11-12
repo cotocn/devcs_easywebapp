@@ -57,7 +57,7 @@ public class EasywebappTest {
 	public void testEasywebapp() throws Exception {
 		driver.get(baseUrl + contextroot + "/top.jsp");
 		try {
-			assertEquals("featureA", driver.findElement(By.xpath("//h2[2]"))
+			assertEquals("featureC", driver.findElement(By.xpath("//h2[2]"))
 					.getText());
 		} catch (Error e) {
 			verificationErrors.append(e.toString());
